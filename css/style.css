@@ -5,7 +5,6 @@
 }
 
 body{
-    color: whitesmoke;
 }
 
 header{
@@ -41,4 +40,28 @@ div.chat{
     height: 100%;
     flex-basis: 70%;
     background-color: violet;
+}
+
+div.user-section{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E7E7E7;
+    padding: .5rem;
+}
+
+div.img-user{
+    height: 50px;
+    width: 50px;
+    padding: .2rem;
+}
+
+div.img-user img{
+    width: 100%;
+    border-radius: 50px;
+}
+
+div.icons i{
+    padding:.3rem;
 }
