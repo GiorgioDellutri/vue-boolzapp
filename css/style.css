@@ -28,4 +28,17 @@ div.container{
     width: 80vw;
     height: 93vh;
     background-color: red;
+    display: flex;
+}
+
+div.sidebar{
+    height: 100%;
+    flex-basis: 40%;
+    background-color: yellow;
+}
+
+div.chat{
+    height: 100%;
+    flex-basis: 60%;
+    background-color: violet;
 }
