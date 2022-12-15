@@ -23,20 +23,22 @@ div.container{
     transform: translate(-50%);
     width: 80vw;
     height: 90vh;
-    background-color: red;
     display: flex;
 }
 
 div.sidebar{
     height: 100%;
     flex-basis: 30%;
-    background-color: yellow;
 }
 
 div.chat{
     height: 100%;
     flex-basis: 70%;
-    background-color: violet;
+}
+
+section.user-chat-section div.icons i{
+    margin: 0 .5rem;
+    font-size: 1.2rem;
 }
 
 div.profile{
@@ -125,19 +127,23 @@ section.list-contact{
     padding-top: 1rem;
 }
 
-div.contact-img {
-    height: 50px;
-    width: 50px;
+
+div.contact-chat{
+    height: 60px;
+    display: flex;
 }
 
-div.contact-img img{
+div.contact-chat img{
     height: 100%;
     border-radius: 50%;
+    display: inline-block;
+    margin-right: 1rem;
 }
 
-div.contact-last-message{
-    height: 50px;
+div.contact-chat p{
+    font-size: 1.2rem;
 }
+
 
 section.user-chat-section{
     height: 7vh;
