@@ -9,11 +9,23 @@ body{
 }
 
 header{
+    position:relative;
     background-color: #009688;
     height: 15vh;
 }
 
 main{
+    position:relative;
     background-color: #D8DBD4;
     height: 85vh;
+}
+
+div.container{
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80vw;
+    height: 93vh;
+    background-color: red;
 }
