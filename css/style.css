@@ -123,13 +123,11 @@ section.list-contact{
     background-color: whitesmoke;
     padding-left: .9rem;
     padding-top: 1rem;
-    display: flex;
 }
 
 div.contact-img {
     height: 50px;
     width: 50px;
-    
 }
 
 div.contact-img img{
@@ -138,7 +136,6 @@ div.contact-img img{
 }
 
 div.contact-last-message{
-    
     height: 50px;
 }
 

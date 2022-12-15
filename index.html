@@ -44,12 +44,14 @@
                             <input type="text" placeholder=" Cerca o inizia una nuova chat">
                         </section>
                         <section class="list-contact">
-                            <div class="contact-img">
-                                <img src="./img/avatar_3.jpg" alt="">
-                            </div>
-                            <div class="contact-last-message">
-                                <p class="contact-name">Name</p>
-                                <span>ultimo messaggio inviato</span>
+                            <div class="single-contact">
+                                <div class="contact-img" v-for="(element) in contacts">
+                                    <img :src=`./img/avatar${element.avatar}.jpg` alt="">
+                                </div>
+                                <div class="contact-last-message" v-for="(element) in contacts">
+                                    <p class="contact-name">{{element.name}}</p>
+                                    <span>ultimo messaggio inviato</span>
+                                </div>
                             </div>
                         </section>
                     </div>
