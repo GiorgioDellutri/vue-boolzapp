@@ -127,9 +127,12 @@ section.list-contact{
     padding-top: 1rem;
 }
 
+div.contact-chat.active{
+    background-color: lightgray;
+}
 
 div.contact-chat{
-    height: 60px;
+    height: 50px;
     display: flex;
 }
 

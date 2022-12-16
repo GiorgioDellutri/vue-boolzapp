@@ -44,7 +44,7 @@
                             <input type="text" placeholder=" Cerca o inizia una nuova chat">
                         </section>
                         <section class="list-contact">
-                            <div class="contact-chat" v-for="(element) in contacts">
+                            <div class="contact-chat" v-for="(element,index) in contacts" @click="clickOnContact(index)">
                                 <img :src=`./img/avatar${element.avatar}.jpg` alt=""> 
                                 <p>{{element.name}}</p> 
                             </div>
@@ -53,7 +53,7 @@
                     <div class="chat">
                         <section class="user-chat-section">
                                 <div class="img-user">
-                                    <img src="./img/avatar_1.jpg" alt="img profile">
+                                    <img :src=`./img/avatar${contacts[activeIndex].avatar}.jpg` alt=""> 
                                 </div>
                                 <div class="icons">
                                     <i class="fas fa-search"></i>
