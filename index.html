@@ -46,7 +46,10 @@
                         <section class="list-contact">
                             <div class="contact-chat" v-for="(element,index) in contacts" @click="clickOnContact(index)">
                                 <img :src=`./img/avatar${element.avatar}.jpg` alt="img contact"> 
-                                <p>{{element.name}}</p> 
+                                <div class="name-contact">
+                                    <p>{{element.name}}</p>
+                                    <span>ultimo messaggio</span> 
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -54,7 +57,10 @@
                         <section class="user-chat-section">
                             <div class="contact-chat">
                                 <img :src=`./img/avatar${contacts[activeIndex].avatar}.jpg` alt=" img contact">
-                                <p> {{contacts[activeIndex].name}}</p>
+                                <div class="name-contact">
+                                    <p> {{contacts[activeIndex].name}}</p>
+                                    <span>ultimo accesso</span>
+                                </div>
                             </div>
                             
                             </p> 
