@@ -45,21 +45,24 @@
                         </section>
                         <section class="list-contact">
                             <div class="contact-chat" v-for="(element,index) in contacts" @click="clickOnContact(index)">
-                                <img :src=`./img/avatar${element.avatar}.jpg` alt=""> 
+                                <img :src=`./img/avatar${element.avatar}.jpg` alt="img contact"> 
                                 <p>{{element.name}}</p> 
                             </div>
                         </section>
                     </div>
                     <div class="chat">
                         <section class="user-chat-section">
-                                <div class="img-user">
-                                    <img :src=`./img/avatar${contacts[activeIndex].avatar}.jpg` alt=""> 
-                                </div>
-                                <div class="icons">
-                                    <i class="fas fa-search"></i>
-                                    <i class="fas fa-paperclip"></i>
-                                    <i class="fas fa-ellipsis-v"></i>
-                                </div>
+                            <div class="contact-chat">
+                                <img :src=`./img/avatar${contacts[activeIndex].avatar}.jpg` alt=" img contact">
+                                <p> {{contacts[activeIndex].name}}</p>
+                            </div>
+                            
+                            </p> 
+                        <div class="icons">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
                         </section>
                         <section class="chat-container">
                             
