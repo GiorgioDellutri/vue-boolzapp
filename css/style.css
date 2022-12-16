@@ -177,7 +177,6 @@ section.chat-container{
 }
 
 div.message{
-    padding: 1.5rem;
     border-radius: 15px;
 }
 
@@ -186,12 +185,17 @@ div.message{
     clear:both;
     background-color: #D2F8B7;
     padding: 1.5rem;
+    margin: 1rem 0;
 }
 
 .received{
     float: left;
     clear:both;
     background-color: #FFFFFF;
+    padding: 1.5rem;
+    margin: 1rem 0;
+
+
 }
 
 section.text-area{

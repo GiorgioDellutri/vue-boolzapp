@@ -72,7 +72,9 @@
                         </section>
                         <section class="chat-container" >
                             <div class="message " v-for="message in contacts[activeIndex].messages" :class="sentStatus(message.status)">
-                                {{message.message}}
+                                <div class="message">
+                                    {{message.message}}
+                                </div>
                             </div>
                         </section>
                         <section class="text-area">
