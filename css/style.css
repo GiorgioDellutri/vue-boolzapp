@@ -44,7 +44,9 @@ div.chat{
     flex-basis: 70%;
 }
 
-section.user-chat-section div.icons i{
+
+div.icons{
+    color: grey;
     margin: 0 .5rem;
     font-size: 1.2rem;
 }
@@ -171,6 +173,25 @@ section.user-chat-section{
 section.chat-container{
     background-image: url(../img/mine.jpg);
     height: 76vh;
+    padding: 1.5rem 2.5rem;
+}
+
+div.message{
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+section.chat-container .message-sent{
+    float: right;
+    clear:both;
+    background-color: #D2F8B7;
+    padding: 1.5rem;
+}
+
+section.chat-container .message-received{
+    float: left;
+    clear:both;
+    background-color: #FFFFFF;
 }
 
 section.text-area{
