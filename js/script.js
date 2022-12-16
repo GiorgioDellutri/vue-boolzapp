@@ -175,6 +175,13 @@ createApp({
         clickOnContact(currentIndex){
             this.activeIndex = currentIndex
         },
+        sentStatus(status){
+            if (status === 'received'){
+                return "received"
+            } else{
+                return "sent"
+            }
+        }
     }
 }).mount('#app')
 

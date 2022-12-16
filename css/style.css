@@ -181,14 +181,14 @@ div.message{
     border-radius: 15px;
 }
 
-section.chat-container .message-sent{
+.sent{
     float: right;
     clear:both;
     background-color: #D2F8B7;
     padding: 1.5rem;
 }
 
-section.chat-container .message-received{
+.received{
     float: left;
     clear:both;
     background-color: #FFFFFF;
