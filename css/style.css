@@ -204,7 +204,7 @@ section.chat-container{
     background-image: url(../img/mine.jpg);
     height: 76vh;
     padding: 1.5rem 2.5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 div.message{
