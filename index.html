@@ -5,6 +5,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Gooogle Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet"> 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--? Css -->
@@ -36,7 +40,7 @@
                                 <i class="fa-solid fa-bell-slash"></i>
                             </div>
                             <div class="notify-text">
-                                Ricevi notifiche di nuovi messaggi
+                                <p>Ricevi notifiche di nuovi messaggi</p> 
                             </div>
                         </section>
                         <section class="search-section">
@@ -44,7 +48,7 @@
                             <input type="text" placeholder=" Cerca o inizia una nuova chat">
                         </section>
                         <section class="list-contact">
-                            <div class="contact-chat" v-for="(element,index) in contacts" @click="clickOnContact(index)">
+                            <div class="contacts" v-for="(element,index) in contacts" @click="clickOnContact(index)">
                                 <img :src=`./img/avatar${element.avatar}.jpg` alt="img contact"> 
                                 <div class="name-contact">
                                     <p>{{element.name}}</p>
@@ -78,8 +82,9 @@
                             </div>
                         </section>
                         <section class="text-area">
-                            <a class="emoji-button"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <input type="text" placeholder=" Cerca o inizia una nuova chat">
+                            <a class="emoji-button"><i class="fa-regular fa-face-smile" id="emoji" ></i></a>
+                            <input type="text" v-model="newMessage" @keyup.enter="sentNewMessage(newMessage, activeIndex)" placeholder="    Scrivi un messaggio">
+                            <a class="emoji-button"><i class="fa-solid fa-microphone" id="mic-icon"></i></a>
                         </section>
                     </div>
                 </div>

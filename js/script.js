@@ -181,7 +181,26 @@ createApp({
             } else{
                 return "sent"
             }
-        }
+        },
+        sentNewMessage(inputUser, activeIndex) {
+            inputUser = {
+                message: inputUser,
+                status: 'sent',
+            }
+            this.contacts[activeIndex].messages.push(inputUser),
+            this.newMessage = '',
+            this.clearUserInput();
+
+        setTimeout(() => {
+            this.contacts[activeIndex].messages.push({
+                message: "bene grazie tu?",
+                status: 'received'
+            });
+            }, 2000);
+        },
+        clearUserInput() {
+            this.newMessage = ''
+        },
     }
 }).mount('#app')
 
