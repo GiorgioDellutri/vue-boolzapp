@@ -45,15 +45,16 @@
                         </section>
                         <section class="search-section">
                             <a class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <input type="text" placeholder=" Cerca o inizia una nuova chat">
+                            <input type="text" v-model="search" placeholder=" Cerca o inizia una nuova chat">
                         </section>
                         <section class="list-contact">
-                            <div class="contacts" v-for="(element,index) in contacts" @click="clickOnContact(index)">
-                                <img :src=`./img/avatar${element.avatar}.jpg` alt="img contact"> 
+                            <div class="contacts" v-for="(element,index) in filterContacts()" @click="clickOnContact(index)">
+                                <img :src=`./img/avatar${element.avatar}.jpg` alt="img contact">
                                 <div class="name-contact">
                                     <p>{{element.name}}</p>
-                                    <span>ultimo messaggio</span> 
+                                    <span>ultimo messaggio</span>
                                 </div>
+                                <span id="last-message-time">13:58</span>
                             </div>
                         </section>
                     </div>
@@ -66,8 +67,6 @@
                                     <span>ultimo accesso</span>
                                 </div>
                             </div>
-                            
-                            </p> 
                         <div class="icons">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
@@ -77,7 +76,9 @@
                         <section class="chat-container" >
                             <div class="message " v-for="message in contacts[activeIndex].messages" :class="sentStatus(message.status)">
                                 <div class="message">
-                                    {{message.message}}
+                                    {{message.message}} 
+                                    <br>
+                                    <span class="orario">13:58</span>
                                 </div>
                             </div>
                         </section>
@@ -90,8 +91,7 @@
                 </div>
             </main>
         </div>
-
-
+        
     <!--? Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--? JS Import -->

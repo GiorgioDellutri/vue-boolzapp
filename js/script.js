@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data() {
         return{
+            search: '',
             activeIndex: 0,
             contacts: [
                 {
@@ -167,13 +168,12 @@ createApp({
                     ],
                 }
             ]
-            
         }
     },
 
     methods: {
-        clickOnContact(currentIndex){
-            this.activeIndex = currentIndex
+        clickOnContact(index){
+            this.activeIndex = index
         },
         sentStatus(status){
             if (status === 'received'){
@@ -194,15 +194,21 @@ createApp({
         setTimeout(() => {
             this.contacts[activeIndex].messages.push({
                 message: "bene grazie tu?",
-                status: 'received'
+                status: 'received',
             });
             }, 2000);
         },
         clearUserInput() {
             this.newMessage = ''
         },
+        filterContacts() {
+            return this.contacts.filter(contact => {
+            return contact.name.toLowerCase().includes(this.search.toLowerCase()) && contact.visible;
+            });
+        },
     }
 }).mount('#app')
+
 
 
 
