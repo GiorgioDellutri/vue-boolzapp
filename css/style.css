@@ -73,9 +73,13 @@ div.profile{
 }
 
 div.img-user{
-    height: 50px;
-    width: 50px;
+    height: 54px;
+    width: 110px;
     padding: .2rem;
+}
+
+div.img-user p{
+    padding:  1rem .5rem;
 }
 
 
