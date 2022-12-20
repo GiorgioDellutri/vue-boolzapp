@@ -78,9 +78,11 @@ div.img-user{
     padding: .2rem;
 }
 
+
 div.img-user img{
     width: 100%;
     border-radius: 50px;
+    display: inline-block;
 }
 
 div.icons i{
@@ -116,6 +118,11 @@ div.notify-message i{
 
 div.notify-message p{
     font-size: .9rem;
+}
+
+div.notify-text a{
+    font-size: .8rem;
+    color: grey;
 }
 
 section.search-section{
